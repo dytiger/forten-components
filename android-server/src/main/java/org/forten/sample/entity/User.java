@@ -1,5 +1,7 @@
 package org.forten.sample.entity;
 
+import java.util.Random;
+
 public class User {
 	private int id;
 	private String name;
@@ -8,10 +10,11 @@ public class User {
 
 	public User() {
 		super();
+		this.id = (new Random()).nextInt(100000000);
 	}
 
 	public User(int id, String name, int age, String email) {
-		super();
+		this();
 		this.id = id;
 		this.name = name;
 		this.age = age;
